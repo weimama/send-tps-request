@@ -10,16 +10,19 @@ function sendRequest (options) {
         reqTps = 1;
     }
 
-    var timeinterval = 60*1000/reqTps;
-    console.log(options);
-    console.log('timeinterval:', timeinterval);
+    var timeinterval = 1000/reqTps;
+    // console.log(options);
+    // console.log('timeinterval:', timeinterval);
+    var count = 0;
 
     var intervalHandler = setInterval(function() {
         request(reqUrl, function (error, response, body) {
+            count++;
+            // console.log('---count:', count);
             if (!error && response.statusCode == 200) {
-                console.log(body) // Show the HTML for the Google homepage.
+                // console.log(body) // Show the HTML for the Google homepage.
             } else {
-                console.log('error:', error);
+                // console.log('error:', error);
             }
         });
 
@@ -28,7 +31,7 @@ function sendRequest (options) {
     setTimeout(function () {
         //clearInterval;
         clearInterval(intervalHandler);
-    }, second*1000*100);
+    }, second*1000 + timeinterval -1);
 
 }
 
