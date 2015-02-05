@@ -1,0 +1,30 @@
+{
+  "name": "send-tps-request",
+  "version": "1.0.0",
+  "description": "send request with tps number",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/weimama/send-tps-request.git"
+  },
+  "keywords": [
+    "send",
+    "request",
+    "with",
+    "tps",
+    "number"
+  ],
+  "author": "benma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/weimama/send-tps-request/issues"
+  },
+  "homepage": "https://github.com/weimama/send-tps-request",
+  "dependencies": {
+    "optimist": "^0.6.1",
+    "request": "^2.53.0"
+  }
+}
